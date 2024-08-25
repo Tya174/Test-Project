@@ -2,8 +2,10 @@
     margin: 0;
     padding: 0;
 }
-$primary-color:blue;
-$secondary-color:red;
+$primary-color: #EEEEEE;
+$secondary-color:#FF9100;
+$font-color: #1E201E;
+
 $alert: (
     'danger': red,
     'succes': green,
@@ -13,20 +15,31 @@ $alert: (
 header{
     background-color: $primary-color;
     width: block;
+    height: 3.5em;
     ul{
         display: flex;
         list-style-type: none;
+        justify-content: end;
+        align-content: center;
+        margin-right: 4em;
+        
     }
     li{
         padding: 1em;
     }
-    &:hover{
-        background-color: $secondary-color;
-        transition: 0,5s;
+    a{
+        text-decoration: none;
+        color: $font-color;
+        &:hover{
+            color: $secondary-color;
+            transition: 0,5s;
+            transform: scale(1.2) translateZ(50px); /* Elemen lebih besar dan menonjol */
+            transition: transform 0.1s ease-in-out;
+        }
     }
 }
 .container1{
-    background-color: aqua;
+    background-color: $secondary-color;
     width: 500px;
     height: auto;
 }
