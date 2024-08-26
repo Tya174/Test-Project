@@ -71,7 +71,49 @@ header a:hover {
   font-size: 20px;
 }
 
-.container2, .container3, .container4 {
+.container2 {
+  background-color: #FFFFFF;
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: 70% auto;
+  grid-template-areas: "matiq imtaq qq ishlah kataaibul" "tulisan tulisan tulisan tulisan tulisan";
+}
+.container2 .matiq {
+  background-color: #FDB827;
+  grid-area: matiq;
+}
+.container2 .imtaq {
+  background-color: #000000;
+  grid-area: imtaq;
+}
+.container2 .qq {
+  background-color: aqua;
+  grid-area: qq;
+}
+.container2 .ishlah {
+  background-color: aquamarine;
+  grid-area: ishlah;
+}
+.container2 .ka {
+  background-color: #FDB827;
+  grid-area: kataaibul;
+}
+.container2 .tulisan {
+  background-color: #FDB827;
+  grid-area: tulisan;
+}
+
+.container3, .container4 {
+  background-color: #FFFFFF;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.container4 {
   background-color: #FFFFFF;
   display: grid;
   place-items: center;
