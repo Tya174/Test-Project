@@ -10,18 +10,63 @@
     <header class="header">
         <nav class="navbar-heading">
             <ul>
-                <a href=""><li>Home</li></a>
-                <a href=""><li>Tentang Kami</li></a>
-                <a href=""><li>Unit/Jenjang</li></a>
-                <a href=""><li>Galery</li></a>
-                <a href=""><li>About</li></a>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Unit/Jenjang</a></li>
+                <li><a href="#">Galery</a></li>
+                <li><a href="#">About</a></li>
             </ul>
-        </nav>
+        </nav>        
     </header>
     <main>
         <div class="container1">
-            <h1>Lorem ipsum dolor sit amet.</h1>
+            <div class="slideshow-background"></div>
+            <img class="logoka"  src="img/logo Karang Taruna.png" alt="logoka">
+            <h1 class="kalimat">
+                KATAAIBUL AHRAAR
+            </h1>
+            <p>ANGKATAN 1 MA QORYATUL QURAN<br>
+            ALUMNI OORYATUL QUR'AN PUTRA 2021/2022<br>
+        MATIQ/IMTAQ</p>
+        </div>
+        <div class="container2">
+
+        </div>
+        <div class="container3">
+
+        </div>
+        <div class="container4">
+
+        </div>
+        <div class="container5">
+
+        </div>
     </main>
     <footer></footer>
+    <script>
+        const images = [
+    'img/hashira.jpg',
+    'img/air.jpeg',
+    'img/hitam.jpg',
+    'img/merah.jpeg',
+    'img/zenitsu.jpg',
+];  // Ganti dengan path gambar yang sesuai
+
+let currentIndex = 0;
+const slideshowElement = document.querySelector('.slideshow-background');
+
+// Fungsi untuk mengubah background image
+function changeBackgroundImage() {
+    slideshowElement.style.backgroundImage = `url(${images[currentIndex]})`;
+    currentIndex = (currentIndex + 1) % images.length;
+}
+
+// Ganti gambar setiap 5 detik (5000 milidetik)
+setInterval(changeBackgroundImage, 6000);
+
+// Set gambar awal
+changeBackgroundImage();
+
+    </script>
 </body>
 </html>
